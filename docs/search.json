@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Portfolio",
+    "section": "",
+    "text": "Welcome to the portfolio. This site showcases research notes, blog posts, and small reproducible projects rendered with Quarto and Jupyter."
+  },
+  {
+    "objectID": "index.html#highlights",
+    "href": "index.html#highlights",
+    "title": "AI Portfolio",
+    "section": "Highlights",
+    "text": "Highlights\n\nMath-ready via MathJax: \\(E = mc^2\\) renders inline and \\[\\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0}\\] renders as display math.\nCode folding and table of contents are enabled for readability.\nBlog posts and projects are executed notebooks for reproducibility."
+  },
+  {
+    "objectID": "index.html#sections",
+    "href": "index.html#sections",
+    "title": "AI Portfolio",
+    "section": "Sections",
+    "text": "Sections\n\nBlog: short notes and updates.\nProjects: concise reproducible demos."
+  },
+  {
+    "objectID": "index.html#sample-code",
+    "href": "index.html#sample-code",
+    "title": "AI Portfolio",
+    "section": "Sample Code",
+    "text": "Sample Code\n\n\nCode\nimport numpy as np\nnp.random.seed(42)\nvalues = np.linspace(0, 1, 5)\nvalues_squared = values**2\nvalues_squared\n\n\narray([0.    , 0.0625, 0.25  , 0.5625, 1.    ])"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Short notebook posts on AI ideas and experiments.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy current debate regarding AI is flawed\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/project.html",
+    "href": "projects/project.html",
+    "title": "Linear Regression Toy Example",
+    "section": "",
+    "text": "A tiny project notebook that fits a line to synthetic data.\nWe generate points from \\(y = 2x + 1\\) with small noise and recover the slope using least squares.\n\n\nCode\nimport numpy as np\nnp.random.seed(1)\nx = np.linspace(0, 1, 6)\nnoise = np.random.normal(scale=0.02, size=x.shape)\ny = 2 * x + 1 + noise\nA = np.vstack([x, np.ones_like(x)]).T\ncoeffs, *_ = np.linalg.lstsq(A, y, rcond=None)\ncoeffs\n\n\nThe estimated slope and intercept should be close to \\((2, 1)\\) on each run."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Compact, executable project notebooks.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLinear Regression Toy Example\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/introduction.html",
+    "href": "blog/introduction.html",
+    "title": "Why current debate regarding AI is flawed",
+    "section": "",
+    "text": "The philosophy is useless majority of time. People can use knowledge without knowing about epistemology, can even treat people and hammers differently without being able to categorize ontology. However, AI breaks people implicit assumptions so badly that first step should be to reevaluate entire metaphysics. Second step should be creating and popularizing correct language as current one is yapping as it conveys confusion not understanding. Reason for that is pretty simple, words meanings form language families in Wittgenstein style. For example using word “understands” brings a lot of connotations like “thinks” or “remembers”. These connotations are created by everyday use and by inherent intuitions. In case of AI this family of meanings is different from normal one, so any usage of standard words gives only partial fit. This mismatch comes from the fact that AI training process is completely different from creation of ordinary tools and its inference process is not an exact match to human thinking process. So what usually happens in many debates I read and heard is that people “project” AI into either “just a tool” which is wrong or “it is thinking or even conscious creature” which is also wrong. Situation looks like debate between people who only saw animals and plants and then someone show them a mushroom which is like different biological Kingdom altogether.\nWhat I want from my readers is to open their minds not only to gain knowledge but in more Taoist spirit to discard old knowledge and assumptions. In fact, I want even more, I want them to learn different paradigms of thought which is harder than just learning some trivia."
+  },
+  {
+    "objectID": "blog/introduction.html#metaphysics-of-statistical-reasoning",
+    "href": "blog/introduction.html#metaphysics-of-statistical-reasoning",
+    "title": "Why current debate regarding AI is flawed",
+    "section": "Metaphysics of statistical reasoning",
+    "text": "Metaphysics of statistical reasoning\nFirst we should explain main metaphysics of statistical reasoning as it is bedrock of AI and without it further explaining is impossible. This type of reasoning is as intuitive for normal humans as piloting jet fighter.\nThere are 3 things in data science: statistical distribution, model and modeler/statistician/machine learning engineer/data scientist/philosopher of epistemology or whatever is popular in the future (neuroprogrammer?, entropist?, tech priest?, Platonic forms’ summoner?, biologist?, goal function designer?). Pick title based on how cool it is for you, they are synonyms or maybe are in the future. For the rest of the book I will use modeler as it is simplest, most indicative of the function and most neutral. Most accurate would be data janitor as unfortunately ~80% of the job is loosing huge chunks of time to ridiculous data issues.\n\nGoal\nThe most important thing in data science is modelling. Modelling is the virtual recreation of the world or some aspect of it. There are multiple domains of data science based on what we want to achieve.\n\n\n\n\n\n\n\n\n\n\nML Task Type\nLearning Setup\nGoal / What It Learns\nCommon Algorithms / Examples\nTypical Use Cases\n\n\n\n\nSupervised Learning\nLabeled data (input → correct output)\nLearn a mapping from inputs to outputs\nLinear Regression, Logistic Regression, SVM, Random Forest, Neural Networks\nSpam detection, price prediction, image classification\n\n\nUnsupervised Learning\nUnlabeled data\nDiscover hidden structure or patterns\nK-Means, Hierarchical Clustering, DBSCAN, PCA\nCustomer segmentation, anomaly detection, topic modeling\n\n\nSelf-Supervised Learning\nAutomatically generated labels\nLearn representations from data itself\nContrastive Learning, Autoencoders, Masked Language Models\nPretraining large models, embeddings\n\n\nReinforcement Learning\nInteraction with an environment\nLearn actions that maximize cumulative reward\nQ-Learning, SARSA, Policy Gradients, DQN\nRobotics, game playing, recommendation systems\n\n\n\nSo all data science starts in some goal. In reality solving some tasks may involve combination of multiple paradigms at once and separation between them is quite fluid. Self-Supervised Learning is itself example of such fluidity as it is between supervised and unsupervised. Another important aspect to highlight is that these goals can be from EVERY DOMAIN. It does not matter if we try to predict weather, spread of pandemic, economy or anything else, modeler can handle that (assuming access to high quality data).\n\n\nData\nRandom Variable is the source of data which we observe. It generates outcomes with given probabilities determined by the probability distribution. It is unknown as it is outside of reality. Our reality is simply one of many possible outcomes. Our observed data was created by the unknown statistical process. In that regard random variable and probability distribution are both outside reality as transcendental abstractions and are more real than reality as random variable is first in causal chain. Existence of dice precede existence of rolled outcomes.\n\nProbability Distribution\nA function that describes how probability is assigned to the values of a random variable \\(X\\). It is how weighted our dice is.\nDiscrete case, Probability Mass Function (PMF): \\[\nP(X = x) = p(x)\n\\] \\[\n\\sum_x p(x) = 1\n\\]\nContinuous case, Probability Distribution Function (PDF): \\[\nf_X(x) \\ge 0\n\\] \\[\n\\int_{-\\infty}^{\\infty} f_X(x)\\,dx = 1\n\\]\nCumulative Distribution Function (CDF): \\[\nF_X(x) = P(X \\le x)\n\\]\nSample/Data/Observation\nA finite set of observed values drawn from a population or distribution. These are rolled outcomes of the dice. A sample of size \\(n\\) is written as: \\[\n\\{x_1, x_2, \\dots, x_n\\}\n\\] Unfortunately sometimes this vector is also denoted as X which can be confusing.\nRandom Variable\nA numerical function that maps outcomes of a random experiment to real numbers.\nIt is commonly denoted by: \\(X\\). It is our dice. To avoid issues related to measure theory we also assume that this function is measurable\n\nIn normal world data and information are used interchangeably. In case of statistic this is serious mistake.\n\nEntropy\nA measure of the uncertainty or randomness of a random variable \\(X\\).\nHigher entropy means more unpredictability.\nDiscrete entropy: \\[\nH(X) = -\\sum_{x} P(X=x)\\log P(X=x)\n\\]\nContinuous entropy (Differential Entropy): \\[\nH(X) = -\\int_{-\\infty}^{\\infty} f_X(x)\\log f_X(x)\\,dx\n\\]\nProperties:\n\n$ H(X) $\nMaximum entropy occurs when all outcomes are equally likely\n\nUnits:\n\nBase 2 logarithm → bits\nBase \\(e\\) logarithm → nats\n\nJoint Entropy\nMeasures the uncertainty of two random variables \\(X\\) and \\(Y\\) together.\n\\[\nH(X, Y) = -\\sum_{x,y} P(X=x, Y=y)\\log P(X=x, Y=y)\n\\]\nConditional Entropy\nMeasures the remaining uncertainty of \\(X\\) given that \\(Y\\) is known.\n\\[\nH(X \\mid Y) = -\\sum_{x,y} P(X=x, Y=y)\\log P(X=x \\mid Y=y)\n\\]\nRelationship: \\[\nH(X, Y) = H(X \\mid Y) + H(Y)\n\\]\nMutual Information\nMeasures how much information one random variable contains about another.\nWidely used in feature selection, representation learning, and many other use cases.\n\\[\nI(X; Y) = \\sum_{x,y} P(X=x, Y=y)\\log \\frac{P(X=x, Y=y)}{P(X=x)P(Y=y)}\n\\]\nEquivalent forms: \\[\nI(X; Y) = H(X) - H(X \\mid Y)\n\\] \\[\nI(X; Y) = H(X) + H(Y) - H(X, Y)\n\\]\nProperties:\n\n\\(I(X; Y) \\ge 0\\)\n\\(I(X; Y) = 0\\) if and only if \\(X\\) and \\(Y\\) are independent\n\nCross-Entropy\nMeasures the average number of bits needed to encode data from a true distribution \\(P\\) using a model distribution \\(Q\\).\nThis is the standard loss function for classification models.\n\\[\nH(P, Q) = -\\sum_x P(x)\\log Q(x)\n\\]\nKullback–Leibler (KL) Divergence\nMeasures how much one probability distribution \\(Q\\) diverges from a true distribution \\(P\\).\nIt is not symmetric and not a true distance metric.\n\\[\nD_{\\mathrm{KL}}(P \\| Q) = \\sum_x P(x)\\log \\frac{P(x)}{Q(x)}\n\\]\nRelationship: Cross-Entropy vs KL Divergence\n\\[\nH(P, Q) = H(P) + D_{\\mathrm{KL}}(P \\| Q)\n\\]\nImplication for ML:\n\nMinimizing cross-entropy is equivalent to minimizing KL divergence\nSince \\(H(P)\\) is fixed, learning focuses on reducing \\(D_{\\mathrm{KL}}(P \\| Q)\\)\n\n\nTo summarize information is difference between starting entropy of the Random Variable and its end entropy under assumption that we observed different variable. So information is contextual property of data.\nThere is also dualistic interpretation of entropy. It is also average number of bits needed to encode certain outcomes. Cross Entropy and Kullback-Leibler Divergence measure number of bits used to encode the outcomes when we are using our model so fake/estimated Random Variable and we want to minimize unnecessery bits. The most succint, (but not less!) description of reality is also the most accurate model.\nSo Random Variables are not variables, but functions. Data is not information, but can contain information. Entropy is bad so we want to get rid of it."
+  }
+]
