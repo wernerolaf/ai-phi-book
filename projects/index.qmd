@@ -1,0 +1,10 @@
+---
+title: "Projects"
+listing:
+  contents: .
+  sort: "date desc"
+  type: default
+page-layout: article
+---
+
+Compact, executable project notebooks.

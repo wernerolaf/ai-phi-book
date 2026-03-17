@@ -1,0 +1,25 @@
+---
+title: "AI Portfolio"
+description: "Minimal academic AI portfolio built with Quarto"
+page-layout: article
+---
+
+Welcome to the portfolio. This site showcases research notes, blog posts, and small reproducible projects rendered with Quarto and Jupyter.
+
+## Highlights
+- Math-ready via MathJax: $E = mc^2$ renders inline and $$\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$$ renders as display math.
+- Code folding and table of contents are enabled for readability.
+- Blog posts and projects are executed notebooks for reproducibility.
+
+## Sections
+- [Blog](blog/index.qmd): short notes and updates.
+- [Projects](projects/index.qmd): concise reproducible demos.
+
+## Sample Code
+```{python}
+import numpy as np
+np.random.seed(42)
+values = np.linspace(0, 1, 5)
+values_squared = values**2
+values_squared
+```

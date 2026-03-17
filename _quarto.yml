@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "AI Portfolio"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: Projects
+        href: projects/index.qmd
+
+format:
+  html:
+    theme: [cosmo, darkly]
+    toc: true
+    code-fold: true
+    mathjax: true
+    df-print: default
+execute:
+  freeze: auto
+  echo: true
